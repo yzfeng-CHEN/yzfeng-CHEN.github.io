@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    
+    Hexo</title>
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <main class="content">
+    <section class="outer">
+  <article id="post-华为数据库使用简介" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+
+    
+    <div class="article-meta">
+      <a href="/2021/04/20/%E5%8D%8E%E4%B8%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%BF%E7%94%A8%E7%AE%80%E4%BB%8B/" class="article-date">
+  <time datetime="2021-04-20T05:05:02.826Z" itemprop="datePublished">2021-04-20</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+<div class="tocbot"></div>
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+      <h1 id="华为数据库使用简介"><a href="#华为数据库使用简介" class="headerlink" title="华为数据库使用简介"></a>华为数据库使用简介</h1><img src="https://github.com/yzfeng-CHEN/typora_pictures/raw/master/img/20210420132205.png" alt="image-20210420132204893" style="zoom:67%;" />
+
+<p>产品名都变化了</p>
+<ul>
+<li>OLTP（on-line transaction processing）翻译为联机事务处理。(Guass100)</li>
+<li>OLAP（On-Line Analytical Processing）翻译为联机分析处理。(Gauss200)</li>
+<li>从字面上来看，OLTP是做事务处理；OLAP是做分析处理。</li>
+<li>从对数据库操作来看，OLTP主要是对数据的增删改；OLAP是对数据的查询</li>
+</ul>
+<h2 id="OPENGUASS"><a href="#OPENGUASS" class="headerlink" title="OPENGUASS"></a>OPENGUASS</h2><p>关系型数据库软件<a target="_blank" rel="noopener" href="https://opengauss.org/en/download.html">https://opengauss.org/en/download.html</a> 类似（mysql 和 sqlserver）</p>
+<h3 id="连接方式"><a href="#连接方式" class="headerlink" title="连接方式"></a>连接方式</h3><ul>
+<li><strong>gsql</strong>  命令行下连接</li>
+<li>**data studio **  图形化界面操作</li>
+</ul>
+<h2 id="GuassDB（for-MySQL）"><a href="#GuassDB（for-MySQL）" class="headerlink" title="GuassDB（for MySQL）"></a>GuassDB（for MySQL）</h2><p><a target="_blank" rel="noopener" href="https://www.mdeditor.tw/pl/pDDh">python端</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"><span class="comment"># 连接数据库</span></span><br><span class="line">db = pymysql.connect(<span class="string">&#x27;124.70.195.51&#x27;</span>,<span class="string">&quot;root&quot;</span>,<span class="string">&quot;GaussDB^_^2&quot;</span>,port =<span class="number">3306</span>, db = <span class="string">&quot;student&quot;</span>, charset=<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">cursor = db.cursor()</span><br><span class="line"><span class="comment"># SQL 查询语句</span></span><br><span class="line">sql = <span class="string">&quot;select * from s_student where id&quot;</span></span><br><span class="line"><span class="comment"># 执行SQL语句</span></span><br><span class="line">cursor.execute(sql)</span><br><span class="line"><span class="comment"># 获取所有记录列表</span></span><br><span class="line">results = cursor.fetchall()</span><br><span class="line"><span class="built_in">print</span>(results)</span><br><span class="line">db.close()  <span class="comment"># 关闭连接</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/04/20/%E5%8D%8E%E4%B8%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%BF%E7%94%A8%E7%AE%80%E4%BB%8B/" data-id="cknpq6is20004i4v0hj0u6ufl" class="article-share-link">
+        Share
+      </a>
+      
+    </footer>
+
+  </div>
+
+  
+  
+<nav class="article-nav">
+  
+  
+  <a href="/2021/04/13/enum%E2%80%94%E2%80%94cpp/" class="article-nav-link">
+    <strong class="article-nav-caption">Older</strong>
+    <div class="article-nav-title"></div>
+  </a>
+  
+</nav>
+
+  
+
+  
+  
+  
+  
+
+</article>
+</section>
+    <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+  <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>Hexo &copy; 2021</li>
+      
+        <li>京ICP备17054916号-2</li>
+      
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+  </main>
+  <aside class="sidebar">
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/hexo.svg" alt="Hexo"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">Home</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">Archives</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">Gallery</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">About</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="Search">
+        <i class="fe fe-search"></i>
+        Search
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="fe fe-feed"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+
+</html>
