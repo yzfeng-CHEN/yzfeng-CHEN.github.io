@@ -30,37 +30,8 @@
 
 <body>
   <main class="content">
-    <section class="jumbotron">
-  <div class="video">
-    
-    <div class="video-media">
-      <video playsinline="" autoplay="" loop="" muted="" data-autoplay="" poster="/images/ocean/ocean.png"
-        x5-video-player-type="h5">
-        <source src="/images/ocean/ocean.mp4" type="video/mp4">
-        <source src="/images/ocean/ocean.ogv" type="video/ogg">
-        <source src="/images/ocean/ocean.webm" type="video/webm">
-        <p>Your user agent does not support the HTML5 Video element.</p>
-      </video>
-      <div class="video-overlay"></div>
-    </div>
-    <div class="video-inner text-center text-white">
-      <h1><a href="/">Echo</a></h1>
-      <p>放弃很容易，可是坚持下去，很酷啊^_^</p>
-      <div><img src="/images/hexo-inverted.svg" class="brand" alt="Echo"></div>
-    </div>
-    <div class="video-learn-more">
-      <a class="anchor" href="#landingpage"><i class="fe fe-mouse"></i></a>
-    </div>
-  </div>
-</section>
-<div id="landingpage">
-  <section class="outer">
-  <article class="articles">
-    
-    <h1 class="page-type-title"></h1>
-    
-    
-    <article id="post-2021.5.21 爬取微博评论信息" class="article article-type-post" itemscope
+    <section class="outer">
+  <article id="post-2021.5.21 爬取微博评论信息" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -74,6 +45,10 @@
       
     </div>
     
+
+    
+    
+<div class="tocbot"></div>
 
     
 
@@ -121,191 +96,34 @@
   </div>
 
   
+  
+<nav class="article-nav">
+  
+  
+  <a href="/2021/04/20/%E5%8D%8E%E4%B8%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%BF%E7%94%A8%E7%AE%80%E4%BB%8B/" class="article-nav-link">
+    <strong class="article-nav-caption">Older</strong>
+    <div class="article-nav-title"></div>
+  </a>
+  
+</nav>
 
+  
+
+  
+  
+  
   
 
 </article>
-    
-    <article id="post-华为数据库使用简介" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-
-    
-    <div class="article-meta">
-      <a href="/2021/04/20/%E5%8D%8E%E4%B8%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%BF%E7%94%A8%E7%AE%80%E4%BB%8B/" class="article-date">
-  <time datetime="2021-04-20T05:05:02.826Z" itemprop="datePublished">2021-04-20</time>
-</a>
-      
-    </div>
-    
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-      
-      <h1 id="华为数据库使用简介"><a href="#华为数据库使用简介" class="headerlink" title="华为数据库使用简介"></a>华为数据库使用简介</h1><img src="https://github.com/yzfeng-CHEN/typora_pictures/raw/master/img/20210420132205.png" alt="image-20210420132204893" style="zoom:67%;" />
-
-<p>产品名都变化了</p>
-<ul>
-<li>OLTP（on-line transaction processing）翻译为联机事务处理。(Guass100)</li>
-<li>OLAP（On-Line Analytical Processing）翻译为联机分析处理。(Gauss200)</li>
-<li>从字面上来看，OLTP是做事务处理；OLAP是做分析处理。</li>
-<li>从对数据库操作来看，OLTP主要是对数据的增删改；OLAP是对数据的查询</li>
-</ul>
-<h2 id="OPENGUASS"><a href="#OPENGUASS" class="headerlink" title="OPENGUASS"></a>OPENGUASS</h2><p>关系型数据库软件<a target="_blank" rel="noopener" href="https://opengauss.org/en/download.html">https://opengauss.org/en/download.html</a> 类似（mysql 和 sqlserver）</p>
-<h3 id="连接方式"><a href="#连接方式" class="headerlink" title="连接方式"></a>连接方式</h3><ul>
-<li><strong>gsql</strong>  命令行下连接</li>
-<li>**data studio **  图形化界面操作</li>
-</ul>
-<h2 id="GuassDB（for-MySQL）"><a href="#GuassDB（for-MySQL）" class="headerlink" title="GuassDB（for MySQL）"></a>GuassDB（for MySQL）</h2><p><a target="_blank" rel="noopener" href="https://www.mdeditor.tw/pl/pDDh">python端</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"><span class="comment"># 连接数据库</span></span><br><span class="line">db = pymysql.connect(<span class="string">&#x27;124.70.195.51&#x27;</span>,<span class="string">&quot;root&quot;</span>,<span class="string">&quot;GaussDB^_^2&quot;</span>,port =<span class="number">3306</span>, db = <span class="string">&quot;student&quot;</span>, charset=<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">cursor = db.cursor()</span><br><span class="line"><span class="comment"># SQL 查询语句</span></span><br><span class="line">sql = <span class="string">&quot;select * from s_student where id&quot;</span></span><br><span class="line"><span class="comment"># 执行SQL语句</span></span><br><span class="line">cursor.execute(sql)</span><br><span class="line"><span class="comment"># 获取所有记录列表</span></span><br><span class="line">results = cursor.fetchall()</span><br><span class="line"><span class="built_in">print</span>(results)</span><br><span class="line">db.close()  <span class="comment"># 关闭连接</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/20/%E5%8D%8E%E4%B8%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%BF%E7%94%A8%E7%AE%80%E4%BB%8B/" data-id="cknprywno0003jov0hfbr9qd9" class="article-share-link">
-        Share
-      </a>
-      
-    </footer>
-
-  </div>
-
-  
-
-  
-
-</article>
-    
-    <article id="post-enum——cpp" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-
-    
-    <div class="article-meta">
-      <a href="/2021/04/13/enum%E2%80%94%E2%80%94cpp/" class="article-date">
-  <time datetime="2021-04-13T07:54:52.375Z" itemprop="datePublished">2021-04-13</time>
-</a>
-      
-    </div>
-    
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-      
-      <h1 id="enum"><a href="#enum" class="headerlink" title="enum"></a>enum</h1><p>由用户定义的一些枚举常数的集合。<br><strong>枚举&lt;类型名&gt; {&lt;枚举常量表&gt;}</strong></p>
-<h2 id="for-instance"><a href="#for-instance" class="headerlink" title="for instance"></a><em>for instance</em></h2><blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">enum color_set1 &#123;RED, BLUE, WHITE, BLACK&#125;; &#x2F;&#x2F; 定义枚举类型color_set1</span><br><span class="line">enum week &#123;Sun, Mon, Tue, Wed, Thu, Fri, Sat&#125;; &#x2F;&#x2F; 定义枚举类型week</span><br></pre></td></tr></table></figure>
-</blockquote>
-<ul>
-<li><p>枚举常量代表该枚举类型的变量可能取的值，编译系统为每个枚举常量指定一个整数值，默认状态下，这个整数就是所列举元素的序号，<strong>序号从0开始</strong>。</p>
-<ul>
-<li>```<br>enum week {Sun=7, Mon=1, Tue, Wed, Thu, Fri, Sat};<br>//枚举常量Sun,Mon,Tue,Wed,Thu,Fri,Sat的值分别为7、1、2、3、4、5、6。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 可以在定义枚举类型时为部分或全部枚举常量指定整数值，在**指定值之前的枚举常量仍按默认方式取值，而指定值之后的枚举常量按依次加1的原则取值**。 **各枚举常量的值可以重复**。</span><br><span class="line"></span><br><span class="line">- 枚举常量只能以标识符形式表示，而不能是整型、字符型等文字常量</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;</span><br><span class="line">    enum letter_set &#123;&#39;a&#39;,&#39;d&#39;,&#39;F&#39;,&#39;s&#39;,&#39;T&#39;&#125;; &#x2F;&#x2F;枚举常量不能是字符常量</span><br><span class="line">    enum year_set&#123;2000,2001,2002,2003,2004,2005&#125;; &#x2F;&#x2F;枚举常量不能是整型常量</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>枚举变量只能参与赋值和关系运算<code>==、&lt;、&gt;、&lt;=、&gt;=、!=等</code>以及输出操作，参与运算时用其本身的整数值</p>
-</li>
-<li><p>不同类型的枚举变量之间不能相互赋值</p>
-</li>
-<li><p>枚举变量的输入输出一般都采用switch语句将其转换为字符或字符串；枚举类型数据的其他处理也往往应用switch语句，以保证程序的合法性和可读性。</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/13/enum%E2%80%94%E2%80%94cpp/" data-id="cknprywnq0004jov0ervscyc6" class="article-share-link">
-        Share
-      </a>
-      
-    </footer>
-
-  </div>
-
-  
-
-  
-
-</article>
-    
-    <article id="post-my-first-blog" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-      
-
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/04/13/my-first-blog/">my-first-blog</a>
-</h2>
-
-
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2021/04/13/my-first-blog/" class="article-date">
-  <time datetime="2021-04-13T05:12:16.000Z" itemprop="datePublished">2021-04-13</time>
-</a>
-      
-    </div>
-    
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-      
-      <h1 id="hexo-d上传错误"><a href="#hexo-d上传错误" class="headerlink" title="hexo d上传错误"></a>hexo d上传错误</h1><p>解决</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:yzfeng-chen&#x2F;yzfeng-chen.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/13/my-first-blog/" data-id="cknprywnl0001jov0ep6r7sfs" class="article-share-link">
-        Share
-      </a>
-      
-    </footer>
-
-  </div>
-
-  
-
-  
-
-</article>
-    
-  </article>
-  
-
-  
 </section>
-</div>
-
     <footer class="footer">
   <div class="outer">
     <div class="float-right">
       <ul class="list-inline">
   
-  <li><i class="fe fe-bar-chart"></i> <span id="busuanzi_value_site_pv"></span></li>
-  
   <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
   
 </ul>
     </div>
@@ -395,6 +213,23 @@
 
 
 
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
 
 
 
